@@ -8,6 +8,7 @@
 
     Dependencies:
     I2Cdev library collection - MPU6050 I2C device class -- https://github.com/jrowberg/i2cdevlib
+    SSD1306Ascii -- https://github.com/greiman/SSD1306Ascii
     
 
   ===============================================
@@ -88,6 +89,7 @@ void setup() {
     }
     return;
   }
+  // name the file
   for (uint8_t i = 0; i < 100; i++) {
     filename[6] = i / 10 + '0';
     filename[7] = i % 10 + '0';
@@ -194,6 +196,7 @@ void SDwrite() {
 #endif
 
 
+//print float
 static void printFloat(const char *str, float val, const char *sep) {
   oled.print(" ");
   oled.print(str);
